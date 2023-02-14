@@ -13,7 +13,7 @@ import { Container } from './App.styled';
 export class App extends Component {
   state = {
     images: [],
-    isLoading: false, //spiner
+    isLoading: false, //spiner на начало
     query: '',
     error: null,
     page: 1,
@@ -33,9 +33,9 @@ export class App extends Component {
 
   fetchImages = () => {
     const { query, page } = this.state;
-    const perPage = 12;
+    const perPage = 12;// max кол-во фото в ответе
 
-    this.setState({ isLoading: true });
+    this.setState({ isLoading: true });//запускается спинер
 
     fetchData(query, page, perPage)
       .then(({ hits, totalHits }) => {
@@ -122,7 +122,7 @@ export class App extends Component {
           </Modal>
         )}
 
-        <ToastContainer theme="colored" position="top-right" autoClose={3000} />
+        <ToastContainer theme="light" position="bottom-right" autoClose={2000} />
       </Container>
     );
   }
