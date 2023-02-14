@@ -46,7 +46,7 @@ export class App extends Component {
         }
 
         if (page === 1) {
-          toast.success(`Hooray! We found ${totalHits} images.`);
+          toast.success(`Way! We found ${totalHits} images.`);
         }
 
         if (page === totalPages) {
