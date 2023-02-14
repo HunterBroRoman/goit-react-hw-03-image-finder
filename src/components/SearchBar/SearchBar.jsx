@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
-import { ImImages } from 'react-icons/im';
+import { HiCamera } from 'react-icons/hi2';
 import {
   SearchHeader,
   SearchForm,
@@ -43,7 +43,7 @@ export class SearchBar extends Component {
       <SearchHeader>
         <SearchForm onSubmit={this.handleSubmit}>
           <SearchButton type="submit">
-            <ImImages style={{ width: 30, height: 30 }} />
+            <HiCamera style={{ width: 30, height: 30 }} />
           </SearchButton>
 
           <SearchFormInput
