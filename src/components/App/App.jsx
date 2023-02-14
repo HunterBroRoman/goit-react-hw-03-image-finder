@@ -13,7 +13,7 @@ import { Container } from './App.styled';
 export class App extends Component {
   state = {
     images: [],
-    isLoading: false,
+    isLoading: false, //spiner
     query: '',
     error: null,
     page: 1,
@@ -39,7 +39,7 @@ export class App extends Component {
 
     fetchData(query, page, perPage)
       .then(({ hits, totalHits }) => {
-        const totalPages = Math.ceil(totalHits / perPage);
+        const totalPages = Math.ceil(totalHits / perPage);//округляем кол-во стр. к меньшему числу
 
         if (hits.length === 0) {
           return toast.error('Sorry, no images found. Please, try again!');
